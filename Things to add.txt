@@ -1,0 +1,22 @@
+1. add file chooser implementation to save and load file
+2. add save and load 2 using java nio
+3. add error handling for this application
+   - list all error scenario that potentially happen ?
+4. is it better to save data on plain text or json ? why ?
+Json digunakan karena membuat encoding dan decoding lebih mudah dan cukup dapat dibaca manusia untuk banyak jenis data, terutama yang kompleks.
+5. is there a better format to json to store data on plain text ?
+   name a couple of alternatives (min 2).
+a. Protobuf (lebih cepat dari JSON, dan memiliki set tipe data yang telah ditentukan sebelumnya dan lebih besar, jika dibandingkan dengan JSON).
+b. Database (Database lebih masuk akal untuk penyimpanan dan pengambilan data yang cepat dan efisien).
+6. is it better to save data on file instead of a dedicated database ?
+Menurut saya lebih baik untuk menyimpan file sebagai file. Alasannya adalah bahwa sistem file dioptimalkan untuk penyimpanan file, sedangkan database tidak.
+ is there a scenario where saving data on file be better ? Tidak, dan tergantung dengan jenis filenya
+7. can you test if a specific file exist in a specified path with java ?
+   how ?  Dapat menggunakan isFile(). Seperti berikut : new File("path/to/file.txt").isFile();
+8  can you test if a specific  directory exist in a specified path ?
+   how ? Bisa menggunakan method "Files.isDirectory(path)" dari file class java.io
+9. can you delete or move file using java ? how ?
+kita dapat menghapus file dengan menggunakan metode kelas File.delete() dan dapat memindahkan dengan method Files.move().
+10. can you think of potentiall security problem when you allow java to freely change file on your computer ? how do we prevent that ? 
+Hanya Gunakan libraries yang Sudah Diuji, 
+Cara yang lebih aman adalah dengan menggunakan pesan kesalahan layar umum untuk pengguna. 
